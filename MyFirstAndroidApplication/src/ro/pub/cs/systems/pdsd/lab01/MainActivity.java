@@ -23,7 +23,9 @@ public class MainActivity extends Activity {
 		public void onClick(View view) {
 			EditText userNameEditText = (EditText)findViewById(R.id.user_name_edit_text);
 			TextView greetingTextView = (TextView)findViewById(R.id.greeting_text_view);
-			greetingTextView.setAlpha(1);
+			
+			//greetingTextView.setAlpha(1);
+			greetingTextView.setText(greetingTextView.getText().toString().replace("xxx", "\n"+userNameEditText.getText()));
 		}
 		
 	}
